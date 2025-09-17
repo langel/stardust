@@ -27,6 +27,8 @@ controls               byte
 controls_d             byte
 ppu_mask_emph          byte ; *
 
+state_jmp_lo   byte
+state_jmp_hi   byte
 
 timer_lo byte
 timer_hi byte

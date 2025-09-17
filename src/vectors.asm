@@ -31,7 +31,8 @@ cart_start: subroutine
 
 	cli
 
-	jsr state_init_main_layout
+	jsr state_title_init
+	;jsr state_explore_init
 
 
 .endless
@@ -107,9 +108,11 @@ nmi_handler: subroutine
 	; hope everything above was under
 	; ~2250 cycles!
 
+	jsr controller_read
+
 	inc wtf
 	
-	jsr state_main_layout_update
+	jsr state_jmp_to
 
 	; disable NMI lockout
 	lda #$00

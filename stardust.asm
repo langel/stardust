@@ -17,6 +17,10 @@ main_layout_nam:
 	include "common.asm"
 
 	include "state.asm"
+	include "state_explore.asm"
+	include "state_map.asm"
+	include "state_title.asm"
+	include "state_win.asm"
 
 	org $0e000 
 	rorg $e000
